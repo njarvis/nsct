@@ -1,7 +1,0 @@
-{
-  "tests/test_nsct.py::TestNsct::()::test_domain_bad_ipv4_subnet_type": true,
-  "tests/test_nsct.py::TestNsct::()::test_yaml_bad_ipv4network": true,
-  "tests/test_yaml.py::TestNsct::()::test_yaml_bad_file": true,
-  "tests/test_yaml.py::TestNsct::()::test_yaml_bad_file_2": true,
-  "tests/test_yaml.py::TestNsct::()::test_yaml_good_allocation": true
-}
