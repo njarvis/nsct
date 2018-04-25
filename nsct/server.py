@@ -121,7 +121,9 @@ class ServerDNS_dnsmasq_openwrt(ServerDNS):
     def generate(self, server):
         logger.info('Generating DNSMASQ(OpenWrt) config for DNS service on {}'.format(server))
 
-        hosts = ['127.0.0.1\tlocalhost', '::\tlocalhost']
+        hosts = ['127.0.0.1\tlocalhost', '::1\tlocalhost ip6-localhost ip6-loopback',
+                 'ff02::1\tip6-allnodes', 'ff02::2\tip6-allrouters']
+
         for domain in self._domains:
             for offset, deviceInterface in iteritems(domain._ipv4Allocations):
                 if isinstance(deviceInterface, DeviceInterface):
